@@ -33,6 +33,13 @@ k9s --kubeconfig ~/Downloads/fixtheops-challenge-cluster
 kubectl --kubeconfig=~/Download/kubeconfig get pods
 ```
 
+### With a variable
+
+```sh
+export KUBECONFIG=~/Download/kubeconfig
+# it will then by the default in the current shell
+```
+
 ### Merge the config with your current kubeconfig
 
 Merge the downloaded kubeconfig to your own kubeconfig. You can check the [official documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/#merging-kubeconfig-files).
@@ -49,4 +56,10 @@ alias fto="kubectl --kubeconfig=~/Download/kubeconfig"
 k get pods
 # or
 fto get pods
+```
+
+## With Helm
+
+```sh
+helm install my-release my-repo/app --kubeconfig=~/Download/kubeconfig
 ```
