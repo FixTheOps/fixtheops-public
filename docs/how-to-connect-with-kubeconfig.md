@@ -1,7 +1,5 @@
 # How to connect with a kubeconfig file
 
-> THIS IS WORK IN PROGRESS, thanks for the patience.
-
 Downloading the kubeconfig file will allow you to access the cluster from anywhere, thus allowing you to use the tools you prefer: Lens, K9s, your terminal, etc.
 
 You can use the kubeconfig in several ways, here are some listed below.
@@ -23,6 +21,20 @@ You don't like GUI? Fine, [k9s](https://k9scli.io/) is amazing. Here is how to s
 
 ```sh
 k9s --kubeconfig ~/Downloads/fixtheops-challenge-cluster
+```
+
+## With Helm (Recommended)
+
+```sh
+export KUBECONFIG=~/Download/kubeconfig
+# it will then by the default in the current shell
+# any helm command will use this kubeconfig
+```
+
+or 
+
+```sh
+helm install my-release my-repo/app --kubeconfig=~/Download/kubeconfig
 ```
 
 ## kubectl
@@ -56,10 +68,4 @@ alias fto="kubectl --kubeconfig=~/Download/kubeconfig"
 k get pods
 # or
 fto get pods
-```
-
-## With Helm
-
-```sh
-helm install my-release my-repo/app --kubeconfig=~/Download/kubeconfig
 ```
