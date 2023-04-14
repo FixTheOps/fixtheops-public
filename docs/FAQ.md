@@ -43,7 +43,7 @@ If you have don't like sharing analytics to improve the website, https://ublocko
 
 ## 🤝 Collaboration
 
-### Can I share challenges answers with others?
+### Can I share challenge answers with others?
 
 It is not advised. The goal is to learn and improve your skills, and sharing answers will not help you to achieve that goal, or help others achieve that goal.
 
